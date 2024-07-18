@@ -16,7 +16,7 @@ let package = Package(
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
-        .package(url: "https://github.com/RevenueCat/purchases-ios.git", from: "4.12.0"),
+        .package(url: "https://github.com/RevenueCat/purchases-ios.git", from: "4.43.2"),
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -24,7 +24,8 @@ let package = Package(
         .target(
             name: "PurchasesHelper",
             dependencies: [
-                .product(name: "RevenueCat", package: "purchases-ios")
+                .product(name: "RevenueCat", package: "purchases-ios"),
+                .product(name: "RevenueCatUI", package: "purchases-ios")
             ]),
     ]
 )
