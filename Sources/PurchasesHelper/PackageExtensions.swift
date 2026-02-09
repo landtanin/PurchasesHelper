@@ -97,7 +97,7 @@ public extension Array where Element: Package {
     }
 }
 
-fileprivate extension SubscriptionPeriod {
+fileprivate extension RevenueCat.SubscriptionPeriod {
     var periodLengthTitle: String {
         let isPlural = value != 1
         return "\(value) \(unit.unitTitle)\(isPlural ? "s" : "")"
@@ -105,13 +105,13 @@ fileprivate extension SubscriptionPeriod {
 }
 
 fileprivate extension StoreProductDiscount {
-    func periodLengthTitle(for unit: SubscriptionPeriod.Unit) -> String {
+    func periodLengthTitle(for unit: RevenueCat.SubscriptionPeriod.Unit) -> String {
         let isPlural = numberOfPeriods != 1
         return "\(numberOfPeriods) \(unit.unitTitle)\(isPlural ? "s" : "")"
     }
 }
 
-fileprivate extension SubscriptionPeriod.Unit {
+fileprivate extension RevenueCat.SubscriptionPeriod.Unit {
     var unitTitle: String {
         switch self {
         case .day:
